@@ -1,0 +1,42 @@
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de build
+*.Build.cs
+*.Generated.cs
+
+# Archivos de log y temporales
+*.log
+*.tlog
+*.tmp
+*.bak
+
+# Archivos de configuración local de NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de Rider o VS Code
+.idea/
+.vscode/
+
+# Archivos de configuración o caché de dotnet
+.vs/
+*.DotSettings.user
+
+# Configuración global de git
+*.orig
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

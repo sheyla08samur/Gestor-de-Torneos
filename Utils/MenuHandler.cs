@@ -1,6 +1,8 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using liga;
+using Liga.models;
+using Liga.Models;
 using Spectre.Console;
 namespace Liga;
 
@@ -48,21 +50,25 @@ public static class MenuHandler
                         // Agregar Torneo
                         AnimacionCarga.MostrarAnimacionCarga();
                         AnsiConsole.Clear();
+                        //AgregarTorneo.AgregarNuevoTorneo(TorneoService.Torneos);//****** OJO ~ OJO ~ OJO ~
                         break;
                     case 2:
                         // Buscar Torneo
                         AnimacionCarga.MostrarAnimacionCarga();
                         AnsiConsole.Clear();
+                        //BuscarTorneo.BuscsarTorneoPorId(TorneoService.Torneos);//****** OJO ~ OJO ~ OJO ~
                         break;
                     case 3:
                         //Eliminar Torneo
                         AnimacionCarga.MostrarAnimacionCarga();
                         AnsiConsole.Clear();
+                        //EliminarTorneo.EliminarTorneoPorId(TorneoService.Torneos);//****** OJO ~ OJO ~ OJO ~
                         break;
                     case 4:
                         // Actualizar Toneo
                         AnimacionCarga.MostrarAnimacionCarga();
                         AnsiConsole.Clear();
+                        //ActualizarTorneo.ActualizarTorneoPorId(TorneoService.Torneos);//****** OJO ~ OJO ~ OJO ~
                         break;
                     case 5:
                     // Regresar al Menú Principal

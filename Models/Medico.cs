@@ -1,5 +1,4 @@
-namespace Liga;
-
+namespace Liga.models;
 public class Medico : Persona
 {
     public string? Especializacion { get; set; }

@@ -134,7 +134,3 @@ Submenú:
         MenuRegistrodeJugadores.cs
         MenuTorneos.cs
         MenuTransferencias.cs
-
-## ▶️ Cómo Clonar el repositorio:
-   ```bash
-   git clone https://github.com/tuusuario/GestorDeportivo.git

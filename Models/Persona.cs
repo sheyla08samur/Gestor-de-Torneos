@@ -1,5 +1,4 @@
-namespace Liga;
-
+namespace Liga.models;
 public class Persona
 {
     public int Id { get; set; }

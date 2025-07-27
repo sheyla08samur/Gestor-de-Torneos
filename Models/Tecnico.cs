@@ -1,5 +1,4 @@
-namespace Liga;
-
+namespace Liga.models;
 public class Tecnico : Persona
 {
     public string? Cargo { get; set; }

@@ -1,5 +1,4 @@
-namespace Liga;
-
+namespace Liga.models;
 public class Jugador : Persona
 {
     public int Dorsal { get; set; }

@@ -1,4 +1,4 @@
-namespace Liga;
+namespace Liga.models;
 
 public class Equipo
 {

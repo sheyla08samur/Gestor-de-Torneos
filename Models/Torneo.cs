@@ -1,5 +1,4 @@
-namespace Liga;
-
+namespace Liga.models;
 public class Torneo
 {
     public int Id { get; set; }

@@ -1,4 +1,4 @@
-namespace Liga;
+namespace Liga.Services;
 
 // Jugadores Con Más Asistencias Torneo
 // Equipos Con Más Goles

@@ -1,7 +1,6 @@
 namespace Liga.Models;
 
 using System.Data;
-using liga;
 using Liga.models;
 using Spectre.Console;
 
@@ -14,10 +13,10 @@ public static class AgregarTorneo
         AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]🏆 Agregar Torneo 🏆[/]").Centered());
         AnsiConsole.MarkupLine("[bold]Ingrese los detalles del torneo:\n[/]");
 
-        int nuevoId = AnsiConsole.Ask<int>("[bold]ID del torneo[/]");
-        string nombre = AnsiConsole.Ask<string>("[bold]Nombre del torneo[/]");
-        DateTime fechaInicio = AnsiConsole.Ask<DateTime>("[bold]Fecha de inicio [/](YYYY-MM-DD)");
-        DateTime fechaFin = AnsiConsole.Ask<DateTime>("[bold]Fecha de fin [/](YYYY-MM-DD))");
+        int nuevoId = AnsiConsole.Ask<int>("[bold]ID del torneo: [/]");
+        string nombre = AnsiConsole.Ask<string>("[bold]Nombre del torneo: [/]");
+        DateTime fechaInicio = AnsiConsole.Ask<DateTime>("[bold]Fecha de inicio [/](YYYY-MM-DD): ");
+        DateTime fechaFin = AnsiConsole.Ask<DateTime>("[bold]Fecha de fin [/](YYYY-MM-DD): ");
 
         Torneo torneo = new Torneo
         {

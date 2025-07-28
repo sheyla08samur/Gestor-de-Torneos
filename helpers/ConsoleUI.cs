@@ -1,5 +1,5 @@
 using Spectre.Console;
-namespace liga;
+namespace Liga.Helpers;
 public static class AnimacionCarga
 {
     public static void MostrarAnimacionCarga(string mensaje)

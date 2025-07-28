@@ -1,4 +1,4 @@
-namespace Liga;
+namespace Liga.Services;
 
 public static class servJugador
 {

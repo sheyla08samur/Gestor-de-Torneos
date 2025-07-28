@@ -1,6 +1,5 @@
 using Spectre.Console;
-namespace Liga;
-
+namespace Liga.Utils;
 public static class MenuIngresarEquipo
 {
     public static void MostrarMenuIngresarEquipo()

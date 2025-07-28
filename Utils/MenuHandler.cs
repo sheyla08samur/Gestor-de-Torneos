@@ -1,10 +1,9 @@
 using System.ComponentModel;
 using System.Diagnostics;
-using liga;
-using Liga.models;
-using Liga.Models;
 using Spectre.Console;
-namespace Liga;
+using Liga.Models;
+using Liga.Helpers;
+namespace Liga.Utils;
 
 public static class MenuHandler
 {
@@ -41,7 +40,7 @@ public static class MenuHandler
             {
                 case 1:
                     // Creación de Torneos
-                    //AnimacionCarga.MostrarAnimacionCarga();
+                    AnimacionCarga.MostrarAnimacionCarga("Ejpera un momento...");
                     AnsiConsole.Clear();
                     MenuTorneos.MostrarMenuAccionTorneos();
                     int opcTorneos = AnsiConsole.Ask<int>("[bold]> [/]");
@@ -50,30 +49,30 @@ public static class MenuHandler
                     {
                         case 1:
                             // Agregar Torneo
-                            AnimacionCarga.MostrarAnimacionCarga("Awanta un momentito");
+                            AnimacionCarga.MostrarAnimacionCarga("Awanta...");
                             AnsiConsole.Clear();
-                            AgregarTorneo.AgregarNuevoTorneo(Program.torneos);//****** OJO ~ OJO ~ OJO ~
+                            AgregarTorneo.AgregarNuevoTorneo(Program.torneos);
                             Console.ReadKey();
                             break;
                         case 2:
                             // Buscar Torneo
-                            //AnimacionCarga.MostrarAnimacionCarga();
+                            AnimacionCarga.MostrarAnimacionCarga("Ejpera, ejpera...");
                             AnsiConsole.Clear();
-                            BuscarTorneo.BuscsarTorneoPorId(Program.torneos);//****** OJO ~ OJO ~ OJO ~
+                            BuscarTorneo.BuscsarTorneoPorId(Program.torneos);
                             Console.ReadKey();
                             break;
                         case 3:
                             //Eliminar Torneo
-                            //AnimacionCarga.MostrarAnimacionCarga();
+                            AnimacionCarga.MostrarAnimacionCarga("Dame un toque...");
                             AnsiConsole.Clear();
-                            EliminarTorneo.EliminarTorneoPorId(Program.torneos);//****** OJO ~ OJO ~ OJO ~
+                            EliminarTorneo.EliminarTorneoPorId(Program.torneos);
                             Console.ReadKey();
                             break;
                         case 4:
                             // Actualizar Toneo
-                            //AnimacionCarga.MostrarAnimacionCarga();
+                            AnimacionCarga.MostrarAnimacionCarga("Calma publo...");
                             AnsiConsole.Clear();
-                            ActualizarTorneo.ActualizarTorneoPorId(Program.torneos);//****** OJO ~ OJO ~ OJO ~
+                            ActualizarTorneo.ActualizarTorneoPorId(Program.torneos);
                             Console.ReadKey();
                             break;
                         case 5:
@@ -241,17 +240,7 @@ public static class MenuHandler
                     Thread.Sleep(2000);
                     MostrarMenuHandler();
                     break;
-
-
-
-
-
-
-                    
-
             }
-
-            }
-        
+        }
     }
 }

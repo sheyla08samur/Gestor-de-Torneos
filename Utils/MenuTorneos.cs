@@ -1,6 +1,5 @@
 using Spectre.Console;
-namespace Liga;
-
+namespace Liga.Utils;
 public static class MenuTorneos
 {
     public static void MostrarMenuAccionTorneos()
@@ -19,6 +18,8 @@ public static class MenuTorneos
         m_accTorneos.AddRow("5", "Regresar al Menú Principal");
 
         AnsiConsole.Write(m_accTorneos);
+        
+        
     }
 }
 

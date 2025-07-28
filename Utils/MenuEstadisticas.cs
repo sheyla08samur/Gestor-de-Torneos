@@ -1,6 +1,5 @@
 using Spectre.Console;
-namespace Liga;
-
+namespace Liga.Utils;
 public static class MenuEstadisticas
 {
     public static void MostrarMenuEstadisticas()
@@ -20,7 +19,6 @@ public static class MenuEstadisticas
         AnsiConsole.Write(m_estadisticas);
     }
 }
-
 /*
 Menú de Estadisticas
 -------------------------

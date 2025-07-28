@@ -1,6 +1,5 @@
 using Spectre.Console;
-namespace Liga;
-
+namespace Liga.Utils;
 public class MenuTransferencia
 {
     public static void MostrarMenuTransferencia()

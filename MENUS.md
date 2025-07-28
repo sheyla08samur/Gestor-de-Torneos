@@ -95,16 +95,3 @@ Menú de Estadisticas
 4.3. Jugadores Más Caros Por Equipo
 4.4. Jugadores Menor Al Promedio De Edad Por Equipo
 4.5. Regresar Al Menu Principal
-
-
-
-
----------------------------------------------------
----------------------------------------------------
----------------------------------------------------
-
-
-
- 
- 
-

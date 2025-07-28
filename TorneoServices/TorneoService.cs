@@ -28,7 +28,8 @@ public static class AgregarTorneo
         };
         torneos.Add(torneo);
 
-        AnimacionCarga.MostrarAnimacionCarga();
+        //AnimacionCarga.MostrarAnimacionCarga();
+        AnsiConsole.MarkupLine("[bold green]Torneo guardado correctamente[/]");
     }
 }
 

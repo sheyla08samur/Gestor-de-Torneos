@@ -1,4 +1,5 @@
 using Spectre.Console;
+using Liga.Services;
 using Liga.Helpers;
 using Liga.Models;
 namespace Liga.Utils;
@@ -29,21 +30,25 @@ public static class MenuIngresarEquipo
                 // Registrar Jugador
                 AnimacionCarga.MostrarAnimacionCarga("Un momento...");
                 AnsiConsole.Clear();
+                RegistrarJugador.RegistrarNuevoJugador(Program.jugadores);
                 break;
             case 2:
                 // Buscar Jugador
                 AnimacionCarga.MostrarAnimacionCarga("Un momento...");
                 AnsiConsole.Clear();
+                BuscarJugador.BuscarJugadorPorId(Program.jugadores);
                 break;
             case 3:
                 // Editar Jugador
                 AnimacionCarga.MostrarAnimacionCarga("Un momento...");
                 AnsiConsole.Clear();
+                EditarJugador.EditarJugadorPorId(Program.jugadores);
                 break;
             case 4:
                 // Eliminar Jugador
                 AnimacionCarga.MostrarAnimacionCarga("Un momento...");
                 AnsiConsole.Clear();
+                BuscarJugador.BuscarJugadorPorId(Program.jugadores);
                 break;
             case 5:
                 // Regresar al Menú Principal

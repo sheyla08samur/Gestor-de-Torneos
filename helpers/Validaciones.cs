@@ -12,14 +12,14 @@ public static class ValidarString
         string nombre = AnsiConsole.Ask<string>(input);
     if (string.IsNullOrWhiteSpace(nombre))
     {
-        AnsiConsole.MarkupLine("El valor no puede ser nulo o vacio.");
+        AnsiConsole.MarkupLine("[red]El valor no puede ser nulo o vacio.[/]");
         return ValString(input);
     }
     foreach (char e in nombre)
     {
         if (char.IsDigit(e))
         {
-            AnsiConsole.MarkupLine("El valor no puede contener números.");
+            AnsiConsole.MarkupLine("[red]El valor no puede contener números.[/]");
             return ValString(input);
         }
     }
@@ -54,13 +54,21 @@ public static class ValidarFecha
 }
 
 // Validar que sea int
-public static class ValInt
+public static class ValidarInt
 {
-    public static void ValIntInput(int input)
+    public static void ValInt(int input)
     {
         if (input <= 0)
         {
             AnsiConsole.MarkupLine("El valor debe ser un número entero positivo.");
+        }
+        foreach (char c in input.ToString())
+        {
+            if (!char.IsDigit(c))
+            {
+                AnsiConsole.MarkupLine("El valor debe ser un número entero positivo.");
+                return;
+            }
         }
     }
 }
@@ -68,7 +76,7 @@ public static class ValInt
 // Validar que sea double
 public static class ValidarDouble
 {
-    public static void ValDoubleInput(double input)
+    public static void ValDouble(double input)
     {
         if (input <= 0)
         {

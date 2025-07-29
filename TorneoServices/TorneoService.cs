@@ -1,8 +1,8 @@
+using Spectre.Console;
+using System.Data;
+using Liga.Helpers;
 namespace Liga.Models;
 
-using System.Data;
-using Liga.models;
-using Spectre.Console;
 
 // Agregar Torneo
 public static class AgregarTorneo
@@ -14,9 +14,9 @@ public static class AgregarTorneo
         AnsiConsole.MarkupLine("[bold]Ingrese los detalles del torneo:\n[/]");
 
         int nuevoId = AnsiConsole.Ask<int>("[bold]ID del torneo: [/]");
-        string nombre = AnsiConsole.Ask<string>("[bold]Nombre del torneo: [/]");
-        DateTime fechaInicio = AnsiConsole.Ask<DateTime>("[bold]Fecha de inicio [/](YYYY-MM-DD): ");
-        DateTime fechaFin = AnsiConsole.Ask<DateTime>("[bold]Fecha de fin [/](YYYY-MM-DD): ");
+        string nombre = ValidarString.ValString("[bold]Nombre del torneo: [/]");
+        DateTime fechaInicio = ValidarFecha.ValFechaInicio("[bold]Fecha de inicio [/](YYYY-MM-DD): ");
+        DateTime fechaFin = ValidarFecha.ValFechaFin("[bold]Fecha de fin [/](YYYY-MM-DD): ", fechaInicio);
 
         Torneo torneo = new Torneo
         {
@@ -27,7 +27,7 @@ public static class AgregarTorneo
         };
         torneos.Add(torneo);
 
-        //AnimacionCarga.MostrarAnimacionCarga();
+        AnimacionCarga.MostrarAnimacionCarga("Guardando torneo...");
         AnsiConsole.MarkupLine("[bold green]Torneo guardado correctamente[/]");
     }
 }
@@ -41,14 +41,15 @@ public static class BuscarTorneo
         AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]🔍 Buscar Torneo 🔍[/]").Centered());
         AnsiConsole.MarkupLine("[bold]Ingrese el ID del Torneo: [/]");
         int id = AnsiConsole.Ask<int>("[bold]> [/]");
+        AnimacionCarga.MostrarAnimacionCarga("Buscando torneo...");
         Torneo? torneo = torneos.FirstOrDefault(t => t.Id == id);
         if (torneo != null)
         {
-            AnsiConsole.MarkupLine($"[bold green]Torneo encontrado: {torneo}[/]");
+            AnsiConsole.MarkupLine($"[bold green]Torneo encontrado:[/] {torneo}");
         }
         else
         {
-            AnsiConsole.MarkupLine("[bold red]Torneo no encontrado.[/]");
+            AnsiConsole.MarkupLine("[red]Torneo no encontrado.[/]");
         }
     }
 }
@@ -66,7 +67,7 @@ public static class EliminarTorneo
         if (torneo != null)
         {
             torneos.Remove(torneo);
-            AnsiConsole.MarkupLine($"[bold green]Torneo eliminado: {torneo.Nombre}[/]");
+            AnsiConsole.MarkupLine($"[bold green]Torneo eliminado:[/] {torneo.Nombre}");
         }
         else
         {

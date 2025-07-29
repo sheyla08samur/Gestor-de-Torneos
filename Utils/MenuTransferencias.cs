@@ -1,4 +1,6 @@
 using Spectre.Console;
+using Liga.Helpers;
+using Liga.Models;
 namespace Liga.Utils;
 public class MenuTransferencia
 {
@@ -15,6 +17,27 @@ public class MenuTransferencia
         m_Transferencia.AddRow("3", "Regresar Al Menú Principal");
 
         AnsiConsole.Write(m_Transferencia);
+
+        int opcTransferencia = AnsiConsole.Ask<int>("[bold]> [/]");
+        switch (opcTransferencia)
+        {
+            case 1:
+                // Comprar Jugador
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 2:
+                // Prestar Jugador
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 3:
+                //Regresar al Menú Principal
+                break;
+            default:
+                // Error
+                break;
+        }
     }
 }
 

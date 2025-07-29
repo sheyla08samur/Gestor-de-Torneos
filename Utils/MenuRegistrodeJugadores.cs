@@ -1,5 +1,8 @@
 using Spectre.Console;
+using Liga.Helpers;
+using Liga.Models;
 namespace Liga.Utils;
+
 public static class MenuIngresarEquipo
 {
     public static void MostrarMenuIngresarEquipo()
@@ -18,6 +21,37 @@ public static class MenuIngresarEquipo
         m_ingEq.AddRow("5", "Regresar al Menú Principal");
 
         AnsiConsole.Write(m_ingEq);
+
+        int opcAccionJugadores = AnsiConsole.Ask<int>("[bold]> [/]");
+        switch (opcAccionJugadores)
+        {
+            case 1:
+                // Registrar Jugador
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 2:
+                // Buscar Jugador
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 3:
+                // Editar Jugador
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 4:
+                // Eliminar Jugador
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 5:
+                // Regresar al Menú Principal
+                break;
+            default:
+                // Error
+                break;
+        }
     }
 }
 

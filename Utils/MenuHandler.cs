@@ -43,126 +43,20 @@ public static class MenuHandler
                     AnimacionCarga.MostrarAnimacionCarga("Ejpera un momento...");
                     AnsiConsole.Clear();
                     MenuTorneos.MostrarMenuAccionTorneos();
-                    int opcTorneos = AnsiConsole.Ask<int>("[bold]> [/]");
-
-                    switch (opcTorneos)
-                    {
-                        case 1:
-                            // Agregar Torneo
-                            AnimacionCarga.MostrarAnimacionCarga("Awanta...");
-                            AnsiConsole.Clear();
-                            AgregarTorneo.AgregarNuevoTorneo(Program.torneos);
-                            Console.ReadKey();
-                            break;
-                        case 2:
-                            // Buscar Torneo
-                            AnimacionCarga.MostrarAnimacionCarga("Ejpera, ejpera...");
-                            AnsiConsole.Clear();
-                            BuscarTorneo.BuscsarTorneoPorId(Program.torneos);
-                            Console.ReadKey();
-                            break;
-                        case 3:
-                            //Eliminar Torneo
-                            AnimacionCarga.MostrarAnimacionCarga("Dame un toque...");
-                            AnsiConsole.Clear();
-                            EliminarTorneo.EliminarTorneoPorId(Program.torneos);
-                            Console.ReadKey();
-                            break;
-                        case 4:
-                            // Actualizar Toneo
-                            AnimacionCarga.MostrarAnimacionCarga("Calma publo...");
-                            AnsiConsole.Clear();
-                            ActualizarTorneo.ActualizarTorneoPorId(Program.torneos);
-                            Console.ReadKey();
-                            break;
-                        case 5:
-                        // Regresar al Menú Principal
-                        default:
-                            break;
-                    }
                     break;
 
                 case 2:
                     // Registro de Equipos
-                    //AnimacionCarga.MostrarAnimacionCarga();
+                    AnimacionCarga.MostrarAnimacionCarga("Aguanta el burro");
                     AnsiConsole.Clear();
                     MenuEquipos.MostrarMenuAccionEquipos();
-                    int opcAccionEquipos = AnsiConsole.Ask<int>("[bold]> [/]");
-                    switch (opcAccionEquipos)
-                    {
-                        case 1:
-                            // Registrar Equipo
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 2:
-                            // Registrar Cuerpo Técnico
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 3:
-                            // Registrar Cuerpo Médico
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 4:
-                            //Inscripción Torneo
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 5:
-                            // Notificaciín de De Transferencia
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 6:
-                            // Salir de Torneo
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 7:
-                            //Regresar al Menú Principal
-                            break;
-                        default:
-                            // Error
-                            break;
-                    }
+                    
                     break;
                 case 3:
                     // Registro de Jugadores
                     //AnimacionCarga.MostrarAnimacionCarga();
                     AnsiConsole.Clear();
-                    MenuEstadisticas.MostrarMenuEstadisticas();
-                    int opcAccionJugadores = AnsiConsole.Ask<int>("[bold]> [/]");
-                    switch (opcAccionJugadores)
-                    {
-                        case 1:
-                            // Registrar Jugador
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 2:
-                            // Buscar Jugador
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 3:
-                            // Editar Jugador
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 4:
-                            // Eliminar Jugador
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 5:
-                            // Regresar al Menú Principal
-                            break;
-                        default:
-                            // Error
-                            break;
-                    }
+                    MenuIngresarEquipo.MostrarMenuIngresarEquipo();
                     break;
 
                 case 4:
@@ -170,62 +64,12 @@ public static class MenuHandler
                     //AnimacionCarga.MostrarAnimacionCarga();
                     AnsiConsole.Clear();
                     MenuTransferencia.MostrarMenuTransferencia();
-                    int opcTransferencia = AnsiConsole.Ask<int>("[bold]> [/]");
-                    switch (opcTransferencia)
-                    {
-                        case 1:
-                            // Comprar Jugador
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 2:
-                            // Prestar Jugador
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 3:
-                            //Regresar al Menú Principal
-                            break;
-                        default:
-                            // Error
-                            break;
-                    }
                     break;
                 case 5:
                     // Estadísticas
                     //AnimacionCarga.MostrarAnimacionCarga();
                     AnsiConsole.Clear();
                     MenuEstadisticas.MostrarMenuEstadisticas();
-                    int opcEstadisticas = AnsiConsole.Ask<int>("[bold]> [/]");
-                    switch (opcEstadisticas)
-                    {
-                        case 1:
-                            // Jugadores Con Más Asistencias Torneo
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 2:
-                            // Equipos Con Más Goles
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 3:
-                            // Jugadores Más Caros Por Equipo
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 4:
-                            // Jugadores Menor Al Promedio De Edad Por Equipo
-                            //AnimacionCarga.MostrarAnimacionCarga();
-                            AnsiConsole.Clear();
-                            break;
-                        case 5:
-                            //Regresar al Menú Principal
-                            break;
-                        default:
-                            // Error
-                            break;
-                    }
                     break;
                 case 6:
                     // Salir del programa

@@ -1,4 +1,6 @@
 using Spectre.Console;
+using Liga.Helpers;
+using Liga.Models;
 namespace Liga.Utils;
 public static class MenuEstadisticas
 {
@@ -17,6 +19,37 @@ public static class MenuEstadisticas
         m_estadisticas.AddRow("5", "Regresar Al Menu Principal");
 
         AnsiConsole.Write(m_estadisticas);
+
+        int opcEstadisticas = AnsiConsole.Ask<int>("[bold]> [/]");
+        switch (opcEstadisticas)
+        {
+            case 1:
+                // Jugadores Con Más Asistencias Torneo
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 2:
+                // Equipos Con Más Goles
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 3:
+                // Jugadores Más Caros Por Equipo
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 4:
+                // Jugadores Menor Al Promedio De Edad Por Equipo
+                AnimacionCarga.MostrarAnimacionCarga("Un momento...");
+                AnsiConsole.Clear();
+                break;
+            case 5:
+                //Regresar al Menú Principal
+                break;
+            default:
+                // Error
+                break;
+        }
     }
 }
 /*

@@ -1,4 +1,6 @@
 using Spectre.Console;
+using Liga.Helpers;
+using Liga.Models;
 namespace Liga.Utils;
 public static class MenuTorneos
 {
@@ -18,7 +20,43 @@ public static class MenuTorneos
         m_accTorneos.AddRow("5", "Regresar al Menú Principal");
 
         AnsiConsole.Write(m_accTorneos);
-        
+        int opcTorneos = AnsiConsole.Ask<int>("[bold]> [/]");
+
+        switch (opcTorneos)
+        {
+            case 1:
+                // Agregar Torneo
+                AnimacionCarga.MostrarAnimacionCarga("Awantaaa...");
+                AnsiConsole.Clear();
+                AgregarTorneo.AgregarNuevoTorneo(Program.torneos);
+                Console.ReadKey();
+                break;
+            case 2:
+                // Buscar Torneo
+                AnimacionCarga.MostrarAnimacionCarga("Ejpera, ejpera...");
+                AnsiConsole.Clear();
+                BuscarTorneo.BuscsarTorneoPorId(Program.torneos);
+                Console.ReadKey();
+                break;
+            case 3:
+                //Eliminar Torneo
+                AnimacionCarga.MostrarAnimacionCarga("Dame un toque...");
+                AnsiConsole.Clear();
+                EliminarTorneo.EliminarTorneoPorId(Program.torneos);
+                Console.ReadKey();
+                break;
+            case 4:
+                // Actualizar Toneo
+                AnimacionCarga.MostrarAnimacionCarga("Calma publo...");
+                AnsiConsole.Clear();
+                ActualizarTorneo.ActualizarTorneoPorId(Program.torneos);
+                Console.ReadKey();
+                break;
+            case 5:
+            // Regresar al Menú Principal
+            default:
+                break;
+        }
         
     }
 }

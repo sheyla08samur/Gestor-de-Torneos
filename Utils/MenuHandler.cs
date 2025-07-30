@@ -1,8 +1,8 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using Spectre.Console;
-using Liga.Models;
 using Liga.Helpers;
+using Liga.Models;
 namespace Liga.Utils;
 
 public static class MenuHandler

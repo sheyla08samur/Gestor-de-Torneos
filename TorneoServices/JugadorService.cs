@@ -174,25 +174,22 @@ public static class EditarJugador
                     break;
             }
         }
-
-
     }
 }
 
-
-
-
-
-
-
-
 // Eliminar Jugador
+public static class EliminarJugador
+{
+    public static void EliminarJugadorPorId(List<Jugador> jugadores)
+    {
+        AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]🗑️ Eliminar Jugador 🗑️[/]").Centered());
+        AnsiConsole.MarkupLine("[bold]Ingrese el id del Jugador que desea eliminar: ");
+        int id = AnsiConsole.Ask<int>("[bold]> [/]");
+        Jugador? jugador = jugadores.FirstOrDefault(j => j.Id == id);
+        AnsiConsole.MarkupLine($"Jugador encontrado:{jugador.Nombre}");
 
-
-
-
-
-
+    }
+}
 
 
 

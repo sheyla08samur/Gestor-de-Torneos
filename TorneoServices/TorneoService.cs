@@ -35,7 +35,7 @@ public static class AgregarTorneo
 // Buscar Torneo
 public static class BuscarTorneo
 {
-    public static void BuscsarTorneoPorId(List<Torneo> torneos)
+    public static void BuscarTorneoPorId(List<Torneo> torneos)
     {
         Console.Clear();
         AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]🔍 Buscar Torneo 🔍[/]").Centered());
@@ -54,27 +54,6 @@ public static class BuscarTorneo
     }
 }
 
-// Eliminar Torneo
-public static class EliminarTorneo
-{
-    public static void EliminarTorneoPorId(List<Torneo> torneos)
-    {
-        Console.Clear();
-        AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]🗑 Eliminar Torneo 🗑[/]").Centered());
-        AnsiConsole.MarkupLine("[bold]Ingrese el ID del Torneo a eliminar: [/]");
-        int id = AnsiConsole.Ask<int>("[bold]> [/]");
-        Torneo? torneo = torneos.FirstOrDefault(t => t.Id == id);
-        if (torneo != null)
-        {
-            torneos.Remove(torneo);
-            AnsiConsole.MarkupLine($"[bold green]Torneo eliminado:[/] {torneo.Nombre}");
-        }
-        else
-        {
-            AnsiConsole.MarkupLine("[bold red]Torneo no encontrado.[/]");
-        }
-    }
-}
 
 // Actualizar Toneo
 public static class ActualizarTorneo
@@ -82,7 +61,7 @@ public static class ActualizarTorneo
     public static void ActualizarTorneoPorId(List<Torneo> torneos)
     {
         Console.Clear();
-        AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]✏ Actualizar Torneo ✏[/]").Centered());
+        AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]✏️ Actualizar Torneo ✏️[/]").Centered());
         AnsiConsole.MarkupLine("[bold]Ingrese el ID de Torneo a actualizar:[/]");
         int id = AnsiConsole.Ask<int>("[bold]> [/]");
         Torneo? torneo = torneos.FirstOrDefault(t => t.Id == id);
@@ -102,6 +81,27 @@ public static class ActualizarTorneo
     }
 }
 
+// Eliminar Torneo
+public static class EliminarTorneo
+{
+    public static void EliminarTorneoPorId(List<Torneo> torneos)
+    {
+        Console.Clear();
+        AnsiConsole.Write(new Spectre.Console.Rule("[bold blue]🗑️ Eliminar Torneo 🗑️[/]").Centered());
+        AnsiConsole.MarkupLine("[bold]Ingrese el ID del Torneo a eliminar: [/]");
+        int id = AnsiConsole.Ask<int>("[bold]> [/]");
+        Torneo? torneo = torneos.FirstOrDefault(t => t.Id == id);
+        if (torneo != null)
+        {
+            torneos.Remove(torneo);
+            AnsiConsole.MarkupLine($"[bold green]Torneo eliminado:[/] {torneo.Nombre}");
+        }
+        else
+        {
+            AnsiConsole.MarkupLine("[bold red]Torneo no encontrado.[/]");
+        }
+    }
+}
 
 
 // Regresar al Menú Principal
